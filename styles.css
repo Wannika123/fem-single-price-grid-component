@@ -1,5 +1,3 @@
-@import url('https://fonts.google.com/specimen/Karla');
-
 * {
     box-sizing: border-box;
 }
@@ -10,15 +8,16 @@ body {
     font-family: 'Karla';
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .grid-container {
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     width: 41rem;
-    height: 32rem;
+    
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -32,9 +31,9 @@ body {
 
 @media (max-width: 28rem) {
     .grid-container {
-        position: relative;
         grid-template-columns: unset;
         width: 90%;
+        height: unset;
     }
     .intro {
         grid-column: unset;
@@ -122,12 +121,6 @@ li {
     list-style: none;
     margin: 0.25rem 0 0.25rem 0;
     opacity: 0.6;
-}
-
-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
 }
 
 .attribution { 
